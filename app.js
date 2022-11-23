@@ -145,8 +145,11 @@ app.post('/api/login', async (req, res) => {
 app.get('/*', function(req, res) {
     res.sendFile(path.join(__dirname + '/dist/libraryapp/index.html'));
    });
+   app.listen(process.env.PORT || 3000, function(){
+    console.log("Server is listening to port 3000")
 
+  });
 
-app.listen(3000,()=>{
-    console.log("Server is listening")
-})
+// app.listen(3000,()=>{
+//     console.log("Server is listening")
+// })
