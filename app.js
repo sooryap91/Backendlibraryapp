@@ -1,5 +1,7 @@
 const express = require('express')
 const app = new express();
+const DATA  = require('./models/book')
+
 app.use(express.urlencoded({extended:true}))
 app.use(express.json());
 const cors = require('cors')
